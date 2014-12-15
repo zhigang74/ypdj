@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!-- HTML5 Hello world by kirupa - http://www.kirupa.com/html5/getting_your_feet_wet_html5_pg1.htm -->
+
+<html lang="en-us">
+<html manifest="officecomm.manifest"> 
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="js/jquery.mobile-1.4.5.min.css" />
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+<title></title>
+
+
+<style>
+	.nav-custom .ui-btn { padding-top: 40px !important; }
+	.nav-custom .ui-btn:after { width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }
+	#chat:after { background:  url("res/tab_chat_pressed.png") 50% 50% no-repeat; background-size: 22px 22px; }
+	#address:after { background:  url("res/tab_chat_pressed.png") 50% 50% no-repeat; background-size: 22px 22px;  }
+	#application:after { background:  url("res/tab_chat_pressed.png") 50% 50% no-repeat;  background-size: 22px 22px; }
+	#setting:after { background:  url("res/tab_chat_pressed.png") 50% 50% no-repeat;  background-size: 22px 22px; }
+</style>
+
+</head>
+
+<!-- <body onload="myChat()"> -->
+
+	
+<body>
+
+<script>
+
+
+
+$(document).ready(function()
+{
+
+
+ $('#title').load('./constants.html #chat');
+
+ //$(document).bind(“mobileinit”, function() { $.mobile.ajaxEnabled = false; });
+
+ 
+		 $("#chat").click(function()
+		{
+			$('#myPage').load('./chat.html');
+			$('#title').load('./constants.html #chat');
+			
+		})
+		  $("#address").click(function()
+		{
+			$('#myPage').load('./address.html');
+			$('#title').load('./constants.html #address');
+		})
+		  $("#application").click(function()
+		{
+
+			$('#myPage').load('./application.html');
+			$('#title').load('./constants.html #application');
+		})
+
+
+  $("#setting").click(function()
+{
+
+	$('#myPage').load('./setting.html');
+	$('#title').load('./constants.html #setting');
+
+})
+
+})
+
+
+</script>
+	
+
+	
+	<div data-role="header" data-position="fixed" data-theme="b">
+		<h1 id="title"></h1>
+		<a href="#" data-icon="plus" data-iconpos="notext" class="ui-btn-right"></a>
+	</div>
+	
+
+	
+	<div id="myPage" data-role="content"></div>
+	
+<!--
+	<a href="ajax.html">Go to another page</a>
+	
+	<div data-role="footer" class="nav-custom" style="overflow:hidden;" id="myFooter" data-theme="b" data-position="fixed" >
+		<div data-role="navbar"  class="nav-custom"  >
+			<ul>
+				<li><input type="button" value="聊天" id="chat" /></li>
+				<li><input type="button" value="地址簿" id="address" /></li>
+				<li><input type="button" value="应用" id="application" /></li>
+				<li><input type="button" value="设置" id="setting" /></li>
+				
+				<li><a href="function()"  id="chat" data-icon="custom">聊天</a></li>
+				<li><a href="function()"  id="address" data-icon="custom">地址簿</a></li>
+				<li><a href="function()"  id="application" data-icon="custom">应用</a></li>
+				<li><a href="function()"  id="setting" data-icon="custom">设置</a></li>
+				
+			</ul>
+		</div>
+	</div>
+			-->
+			
+	<div data-role="footer" class="nav-custom" id="myFooter" data-theme="b" data-position="fixed" >
+		<div data-role="navbar"  class="nav-custom"  >
+			<ul>
+				<li><button id="chat" class="ui-btn ui-btn-icon-top"  style="text-align: center" data-icon="custom">聊天</button></li>
+				<li><button id="address" class="ui-btn ui-btn-icon-top" style="text-align: center" data-icon="custom">地址簿</button></li>
+				<li><button id="application" class="ui-btn ui-btn-icon-top" style="text-align: center" data-icon="custom">应用</button></li>
+				<li><button id="setting" class="ui-btn ui-btn-icon-top" style="text-align: center" data-icon="custom">设置</button></li>
+			</ul>
+		</div>
+	</div>
+	
+
+
+</body>
+
+
+</html>

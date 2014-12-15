@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- HTML5 Hello world by kirupa - http://www.kirupa.com/html5/getting_your_feet_wet_html5_pg1.htm -->
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="js/jquery.mobile-1.4.5.min.css" />
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+
+
+
+<script>
+ $(document).ready(function(){
+  
+  $("#btn").click(function(){
+   $("#result").load("./testajax.html",function(responseText,textStatus){
+    $("#display").append("<hr>responseText:"+responseText);
+    $("#display").append("<hr>textStatus:"+textStatus);
+   });  
+  });
+  
+  $("#btn1").click(function(){
+	
+	$("#result").load("./chat.html");
+	
+  });
+  
+    $("#btn2").click(function(){
+	
+	$("#result").load("./address.html");
+	
+  });
+    $("#btn3").click(function(){
+	
+	$("#result").load("./application.html");
+	
+  });
+    $("#btn4").click(function(){
+	
+	$("#result").load("./setting.html");
+	
+  });
+  
+  
+   $("#chat").click(function()
+{
+	//$.mobile.pageLoadErrorMessage = "";
+	$("#result").load("./chat.html");
+	//$('#title').load('./constants.html #chat');
+	
+})
+  
+     $("#address").click(function()
+{
+	//$.mobile.pageLoadErrorMessage = "";
+	$("#result").load("./address.html");
+	//$('#title').load('./constants.html #chat');
+	
+})
+
+  
+ });
+</script>
+</head>
+<body>
+
+
+
+<input type="button" value="测试" id="btn" />
+<h2>显示的内容如下abcde：</h2>
+<div id="result"></div>
+<h2>结果：</h2>
+<div id="display"></div>
+
+	<a href="test.html">Back to another page</a>
+	
+	<div data-role="footer" class="nav-custom" style="overflow:hidden;" id="myFooter" data-theme="b" data-position="fixed" >
+		<div data-role="navbar"  class="nav-custom"  >
+			<ul>
+				<li><input type="button" value="聊天" id="btn1" /></li>
+				<li><input type="button" value="地址簿" id="btn2" /></li>
+				<li><input type="button" value="应用" id="btn3" /></li>
+				<li><input type="button" value="设置" id="btn4" /></li>
+				<!--
+				<li><a href="function()"  id="chat" data-icon="custom">聊天</a></li>
+				<li><a href="function()"  id="address" data-icon="custom">地址簿</a></li>
+				<li><a href="function()"  id="application" data-icon="custom">应用</a></li>
+				<li><a href="function()"  id="setting" data-icon="custom">设置</a></li>
+				-->
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /footer -->
+
+</body>
+</html>
