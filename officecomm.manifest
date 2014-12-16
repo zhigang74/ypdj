@@ -1,0 +1,24 @@
+CACHE MANIFEST
+# v1 2011-08-14
+# This is another comment
+CACHE:
+sign-in.html
+test.html
+chat.html
+address.html
+application.html
+setting.html
+res/tab_chat_pressed.png
+res/tab_address_pressed.png
+res/tab_app_pressed.png
+res/tab_settings_pressed.png
+person/1.jpg
+person/2.jpg
+person/3.jpg
+
+# Use from network if available
+NETWORK:
+
+
+# Fallback content
+FALLBACK:
